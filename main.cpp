@@ -448,7 +448,7 @@ int main(void)
         ->setSpecStr(10)
         ->setLightVec(new glm::vec3(0,-1,0))
         ->setLightColor(new glm::vec3(0, 0, 0.2))
-        ->setUnifs(dirUnifs);
+        ->placeUnifs(dirUnifs);
 
         GLint ptUnifs[7]{
     obj_shaderProgram.findUloc("pt_phong"),
@@ -468,7 +468,7 @@ int main(void)
         ->setSpecStr(1)
         ->setLightVec(new glm::vec3(playerSub.getPosition()))
         ->setLightColor(new glm::vec3(0.3,0.5,0))
-        ->setUnifs(ptUnifs);
+        ->placeUnifs(ptUnifs);
     GLint hasBmp = obj_shaderProgram.findUloc("hasBmp");
     GLint eyePos = obj_shaderProgram.findUloc("eyePos");
 
